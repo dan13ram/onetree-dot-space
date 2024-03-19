@@ -4,7 +4,7 @@ import { join } from "path";
 
 import { WorkPost } from "./types";
 
-const workDirectory = join(process.cwd(), "_data", "work");
+const workDirectory = join(process.cwd(), "data", "work");
 
 export function getWorkPostSlugs(): string[] {
   return fs.readdirSync(workDirectory);

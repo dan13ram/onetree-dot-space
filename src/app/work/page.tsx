@@ -1,7 +1,16 @@
-import { Heading } from "@chakra-ui/react";
+import { WorkTile } from "@/components/WorkTile";
+import { getAllWorkPosts } from "@/content/work";
 
 const Work: React.FC = () => {
-  return <Heading>Work</Heading>;
+  const workPosts = getAllWorkPosts();
+
+  return (
+    <>
+      {workPosts.map((post) => (
+        <WorkTile key={post.slug} {...post} />
+      ))}
+    </>
+  );
 };
 
 export default Work;

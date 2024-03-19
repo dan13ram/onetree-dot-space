@@ -6,6 +6,7 @@ description: Deliberative democracy on Blockchain
 featured: true
 thumbnail: /images/work/arborvote.png
 image: /images/work/arborvote.png
+points:
     - Rational decision-making by quadratic voting on argument trees.
     - Developed the dapp which interacts with the smart-contracts using web3JS.
     - Ongoing open-source project.

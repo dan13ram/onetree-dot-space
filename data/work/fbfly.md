@@ -6,6 +6,7 @@ description: DeFi for facebook groups
 featured: true
 thumbnail: /images/work/fbfly-bg.png
 image: /images/work/fbfly.png
+points:
     - Collect and manage funds for your facebook group with the power of DAOs.
     - Won the Almighty Quetzalcoatl Prize and the second prize for Best UX in DAO Global Hackathon http://hackforfreedom.org/.
 links:

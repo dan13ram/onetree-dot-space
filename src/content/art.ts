@@ -4,7 +4,7 @@ import { join } from "path";
 
 import { ArtPost } from "./types";
 
-const artDirectory = join(process.cwd(), "_data", "art");
+const artDirectory = join(process.cwd(), "data", "art");
 
 export function getArtPostSlugs(): string[] {
   return fs.readdirSync(artDirectory);

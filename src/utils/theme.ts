@@ -6,8 +6,9 @@ export const theme = extendTheme({
     useSystemColorMode: false,
   },
   fonts: {
-    heading: "var(--font-rubik)",
-    body: "var(--font-rubik)",
+    heading: `"BagnardSans", serif`,
+    body: `"Bagnard", serif`,
+    mono: `"Kode Mono", monospace`,
   },
   styles: {
     global: {
@@ -23,16 +24,16 @@ export const theme = extendTheme({
   },
   colors: {
     darkGreen: {
-      DEFAULT: "#012622",
-      100: "#000807",
-      200: "#00100e",
-      300: "#011816",
-      400: "#01201d",
-      500: "#012622",
-      600: "#038376",
-      700: "#06dfc9",
-      800: "#48fae8",
-      900: "#a4fdf4",
+      DEFAULT: "#024f47",
+      100: "#00100e",
+      200: "#01201d",
+      300: "#01302b",
+      400: "#024039",
+      500: "#024f47",
+      600: "#04a393",
+      700: "#06f7df",
+      800: "#58fbea",
+      900: "#abfdf5",
     },
     mayaBlue: {
       DEFAULT: "#7cc6fe",

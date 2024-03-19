@@ -1,10 +1,9 @@
 import { VStack } from "@chakra-ui/react";
 import type { Metadata } from "next";
 
+import { Fonts } from "@/components/Fonts";
 import { NavBar } from "@/components/NavBar";
-
-import { fonts } from "./fonts";
-import { Providers } from "./providers";
+import { Providers } from "@/components/Providers";
 
 export const metadata: Metadata = {
   title: "OneTree Space",
@@ -14,10 +13,11 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={fonts.rubik.variable}>
+      <body>
         <Providers>
+          <Fonts />
           <NavBar />
-          <VStack spacing={8} p={8} w="100%">
+          <VStack spacing={8} p={{ base: 4, md: 6, lg: 8 }} w="100%">
             {children}
           </VStack>
         </Providers>
