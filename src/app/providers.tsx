@@ -1,10 +1,11 @@
 "use client";
 
-import { theme } from "@/utils/theme";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useLayoutEffect } from "react";
 
-export const Providers = ({ children }: { children: React.ReactNode }) => {
+import { theme } from "@/utils/theme";
+
+export const Providers: React.FC<React.PropsWithChildren> = ({ children }) => {
   useLayoutEffect(() => {
     window.localStorage.setItem("chakra-ui-color-mode", "dark");
   }, []);

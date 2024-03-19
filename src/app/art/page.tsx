@@ -1,7 +1,7 @@
-// app/page.tsx
-
 import { Heading } from "@chakra-ui/react";
 
-export default function Art() {
+const Art: React.FC = () => {
   return <Heading>Art</Heading>;
-}
+};
+
+export default Art;

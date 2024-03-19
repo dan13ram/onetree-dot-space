@@ -1,7 +1,7 @@
-// app/page.tsx
-
 import { Heading } from "@chakra-ui/react";
 
-export default function Home() {
+const Home: React.FC = () => {
   return <Heading>Home</Heading>;
-}
+};
+
+export default Home;

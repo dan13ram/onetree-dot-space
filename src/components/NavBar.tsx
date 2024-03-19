@@ -1,16 +1,16 @@
-// app/page.tsx
 "use client";
+
 import { Link } from "@chakra-ui/next-js";
 import {
-  useBreakpointValue,
   Box,
-  HStack,
-  VStack,
   Drawer,
+  DrawerBody,
   DrawerContent,
   DrawerHeader,
-  DrawerBody,
+  HStack,
+  useBreakpointValue,
   useDisclosure,
+  VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
 
@@ -219,7 +219,7 @@ const MobileNavBar = () => {
   );
 };
 
-export const NavBar = () => {
+export const NavBar: React.FC = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   return isMobile ? <MobileNavBar /> : <DesktopNavBar />;

@@ -1,19 +1,17 @@
-import type { Metadata } from "next";
-import { Providers } from "./providers";
-import { fonts } from "./fonts";
-import { NavBar } from "@/components/NavBar";
 import { VStack } from "@chakra-ui/react";
+import type { Metadata } from "next";
+
+import { NavBar } from "@/components/NavBar";
+
+import { fonts } from "./fonts";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "OneTree Space",
   description: "OneTree Space",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en">
       <body className={fonts.rubik.variable}>
@@ -26,4 +24,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
