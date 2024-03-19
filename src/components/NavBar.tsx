@@ -60,7 +60,7 @@ const DesktopNavBar = () => {
       <VStack>
         <Link
           href="/"
-          fontFamily="mono"
+          fontFamily="subheading"
           _hover={{
             color: "asparagus.500",
           }}
@@ -73,7 +73,7 @@ const DesktopNavBar = () => {
           <Link
             key={link.href}
             href={link.href}
-            fontFamily="mono"
+            fontFamily="subheading"
             _hover={{
               color: "asparagus.500",
             }}
@@ -136,7 +136,7 @@ const MobileNavBar = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  fontFamily="mono"
+                  fontFamily="subheading"
                   color="aliceBlue.500"
                   fontSize="xl"
                   _hover={{
@@ -166,7 +166,7 @@ const MobileNavBar = () => {
       >
         <Link
           href="/"
-          fontFamily="mono"
+          fontFamily="subheading"
           _hover={{
             color: "asparagus.500",
           }}

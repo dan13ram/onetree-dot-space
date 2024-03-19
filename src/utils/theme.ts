@@ -6,7 +6,11 @@ export const theme = extendTheme({
     useSystemColorMode: false,
   },
   fonts: {
-    heading: `"BagnardSans", serif`,
+    BasteleurBold: `"BasteleurBold", serif`,
+    heading: `"BasteleurBold", sans-serif`,
+    BagnardSans: `"BagnardSans", sans-serif`,
+    subheading: `"BagnardSans", sans-serif`,
+    Bagnard: `"Bagnard", serif`,
     body: `"Bagnard", serif`,
     mono: `"Kode Mono", monospace`,
   },

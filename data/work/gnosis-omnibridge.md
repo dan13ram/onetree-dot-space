@@ -11,7 +11,7 @@ points:
     - Developed the frontend react dapp and the subgraph to index the smart-contracts.
     - Ongoing open-source project
 links:
-    - label: live demo
+    - label: live dapp
       icon: view
       url: https://omni.gnosischain.com
     - label: code

@@ -12,7 +12,7 @@ points:
     - Also developed the subgraph to index the smart-contracts, as well as added 100% unit test coverage to the smart contracts.
     - Ongoing open-source project
 links:
-    - label: live demo
+    - label: live dapp
       icon: view
       url: https://poign.art
     - label: code

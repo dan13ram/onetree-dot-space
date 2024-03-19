@@ -12,15 +12,9 @@ points:
     - Developed the KMS to securely share private keys to buyers after sale is done.
     - Finalists in HackFS EthGlobal Hackathon 2020.
 links:
-    - label: live demo
-      icon: view
-      url: https://eth-ipfs-market.web.app/
     - label: code
       icon: github
       url: https://github.com/shopfs/dapp
-    - label: docs
-      icon: docs
-      url: https://shopfs-docs.web.app/
 tools:
     - reactjs
     - solidity

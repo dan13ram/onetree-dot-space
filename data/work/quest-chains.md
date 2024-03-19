@@ -12,7 +12,7 @@ points:
     - Finalists in DAOHacks EthGlobal Hackathon 2022.
     - Ongoing open-source project
 links:
-    - label: live demo
+    - label: live dapp
       icon: view
       url: https://questchains.xyz
     - label: code

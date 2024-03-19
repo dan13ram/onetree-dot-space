@@ -10,9 +10,9 @@ points:
     - The go to place for all things related to the Trusted Seed, also serving as a tool for the Trusted Seed members.
     - Developed the frontend react application.
 links:
-    - label: live demo
+    - label: live dapp
       icon: view
-      url: https://trusted-seed-dashboard-netlify.netlify.app/
+      url: https://dashboard.trustedseed.org/
     - label: code
       icon: github
       url: https://github.com/Trusted-Seed/dashboard

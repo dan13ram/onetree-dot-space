@@ -11,7 +11,7 @@ points:
     - Developed the frontend react dapp, the subgraph to index the smart-contracts, as well as the smart contracts with 100% unit test coverage.
     - Ongoing open-source project
 links:
-    - label: live demo
+    - label: live dapp
       icon: view
       url: https://smartinvoice.xyz
     - label: code

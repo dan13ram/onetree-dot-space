@@ -11,9 +11,6 @@ points:
     - Developed the dapp which interacts with the smart-contracts using web3JS.
     - Ongoing open-source project.
 links:
-    - label: live demo
-      icon: view
-      url: https://arborvote.web.app/
     - label: code
       icon: github
       url: https://github.com/ArborVote

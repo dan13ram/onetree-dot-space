@@ -12,9 +12,6 @@ points:
     - Worked on the telegram bot to quickly onboard users to interact with an Aragon DAO.
     - Ongoing open-source project.
 links:
-    - label: live demo
-      icon: view
-      url: https://vahanam-app.web.app/
     - label: code
       icon: github
       url: https://github.com/VahanamOrganization/vahanam-supply-chain

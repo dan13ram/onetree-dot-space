@@ -11,9 +11,9 @@ points:
     - Co-developed the frontend nextJs dapp.
     - Ongoing open-source project
 links:
-    - label: live demo
+    - label: live dapp
       icon: view
-      url: https://my.metagame.wtf
+      url: https://metagame.wtf
     - label: code
       icon: github
       url: https://github.com/MetaFam/TheGame

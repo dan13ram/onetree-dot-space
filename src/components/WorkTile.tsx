@@ -73,7 +73,11 @@ export const WorkTile: React.FC<WorkPost> = ({
               <Heading fontWeight="700" pr="3.5rem">
                 {title}
               </Heading>
-              <Text fontWeight="500" fontFamily="heading" color="darkGreen.600">
+              <Text
+                fontWeight="500"
+                fontFamily="subheading"
+                color="darkGreen.600"
+              >
                 {description}
               </Text>
               <WithBreakpoint {...{ base: false, lg: true }}>
