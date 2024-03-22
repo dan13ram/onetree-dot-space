@@ -3,11 +3,9 @@ import {
   Heading,
   HStack,
   Link,
-  ListItem,
   SimpleGrid,
   Tag,
   Text,
-  UnorderedList,
   VStack,
   Wrap,
 } from "@chakra-ui/react";
@@ -16,13 +14,11 @@ import { WorkPost } from "@/content/types";
 
 import { ExternalLinkIcon } from "./icons/ExternalLinkIcon";
 import { GithubIcon } from "./icons/GithubIcon";
-import { WithBreakpoint } from "./WithBreakpoint";
 
 export const WorkTile: React.FC<WorkPost> = ({
   title,
-  description,
+  overview,
   thumbnail,
-  points,
   links,
   tools,
 }) => {
@@ -54,13 +50,13 @@ export const WorkTile: React.FC<WorkPost> = ({
           display="flex"
           alignItems="stretch"
           borderRadius="1rem"
-          bg="rgba(24, 198, 254, 0.3)"
+          bg="lightGreen"
         >
           <VStack
             align="stretch"
             w="100%"
-            px={8}
-            py={6}
+            px={{ base: 4, lg: 8 }}
+            py={{ base: 4, lg: 6 }}
             spacing={6}
             justifyContent="space-between"
             borderRadius="1rem"
@@ -70,29 +66,16 @@ export const WorkTile: React.FC<WorkPost> = ({
             }}
           >
             <VStack align="stretch" w="100%">
-              <Heading fontWeight="700" pr="3.5rem">
+              <Heading fontWeight="700" pr="3.75rem">
                 {title}
               </Heading>
-              <Text
-                fontWeight="500"
-                fontFamily="subheading"
-                color="darkGreen.600"
+              <SimpleGrid
+                templateColumns={{ base: "1fr", lg: "2fr 1fr", xl: "1fr 1fr" }}
+                spacing={4}
+                mt="1rem"
               >
-                {description}
-              </Text>
-              <WithBreakpoint {...{ base: false, lg: true }}>
-                <SimpleGrid
-                  templateColumns={{ base: "2fr 1fr", xl: "1fr 1fr" }}
-                  spacing={4}
-                  mt="1rem"
-                >
-                  <UnorderedList>
-                    {points.map((point) => (
-                      <ListItem key={point}>{point}</ListItem>
-                    ))}
-                  </UnorderedList>
-                </SimpleGrid>
-              </WithBreakpoint>
+                <Text fontWeight="500">{overview}</Text>
+              </SimpleGrid>
             </VStack>
             <VStack align="stretch" w="100%">
               <Wrap mt="1.5rem">
@@ -102,6 +85,7 @@ export const WorkTile: React.FC<WorkPost> = ({
                     colorScheme="darkGreen"
                     color="aliceBlue.500"
                     fontFamily="mono"
+                    fontSize={{ base: "xs", lg: "sm" }}
                   >
                     {tool}
                   </Tag>

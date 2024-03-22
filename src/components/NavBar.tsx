@@ -55,8 +55,8 @@ const DesktopNavBar = () => {
       position="fixed"
       top="0"
       left="0"
-      bg="darkGreen.500"
-      color="aliceBlue.500"
+      color="darkGreen.500"
+      bg="linear-gradient(180deg, rgba(24, 198, 254, 0.3), 80%, #024f47)"
     >
       <VStack>
         <Link
@@ -154,70 +154,79 @@ const MobileNavBar = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-      <HStack
-        w="100vw"
-        h="5rem"
-        pr={8}
-        pl={6}
-        justify="space-between"
+      <Box
         position="fixed"
         bottom="0"
         left="0"
-        bg="darkGreen.500"
-        color="aliceBlue.500"
+        w="100vw"
+        h="5rem"
+        bg="white"
         zIndex="9999"
+        boxShadow="0px 0px 10px 0px rgba(0,0,0,0.3)"
       >
-        <Link
-          href="/"
-          fontFamily="subheading"
-          _hover={{
-            color: "asparagus.500",
-          }}
+        <HStack
+          w="100vw"
+          h="5rem"
+          pr={8}
+          pl={6}
+          justify="space-between"
+          color="darkGreen.500"
+          bg="linear-gradient(90deg, rgba(24, 198, 254, 0.3), 80%, #024f47)"
         >
-          <OneTreeIcon w="3rem" h="3rem" />
-        </Link>
+          <Link
+            href="/"
+            fontFamily="subheading"
+            _hover={{
+              color: "asparagus.500",
+            }}
+          >
+            <OneTreeIcon w="3rem" h="3rem" />
+          </Link>
 
-        <Box
-          w="32px"
-          h="25px"
-          onClick={isOpen ? onClose : onOpen}
-          cursor="pointer"
-          role="group"
-        >
           <Box
-            w="100%"
-            h="3px"
-            bg="aliceBlue.500"
-            transition="all 0.5s"
-            transform={isOpen ? "rotate(405deg) translate(8px, 8px)" : "none"}
-            _groupHover={{
-              bg: "asparagus.500",
-            }}
-          />
-          <Box
-            w="100%"
-            h="3px"
-            bg="aliceBlue.500"
-            transition="all 0.5s"
-            _groupHover={{
-              bg: "asparagus.500",
-            }}
-            transform={isOpen ? "scale(0)" : "none"}
-            mt="8px"
-          />
-          <Box
-            w="100%"
-            h="3px"
-            bg="aliceBlue.500"
-            transition="all 0.5s"
-            transform={isOpen ? "rotate(-225deg) translate(-8px, 8px)" : "none"}
-            _groupHover={{
-              bg: "asparagus.500",
-            }}
-            mt="8px"
-          />
-        </Box>
-      </HStack>
+            w="32px"
+            h="25px"
+            onClick={isOpen ? onClose : onOpen}
+            cursor="pointer"
+            role="group"
+          >
+            <Box
+              w="100%"
+              h="3px"
+              bg="aliceBlue.500"
+              transition="all 0.5s"
+              transform={isOpen ? "rotate(405deg) translate(8px, 8px)" : "none"}
+              _groupHover={{
+                bg: "asparagus.500",
+              }}
+            />
+            <Box
+              w="100%"
+              h="3px"
+              bg="aliceBlue.500"
+              transition="all 0.5s"
+              _groupHover={{
+                bg: "asparagus.500",
+              }}
+              transform={isOpen ? "scale(0)" : "none"}
+              mt="8px"
+            />
+            <Box
+              w="100%"
+              h="3px"
+              bg="aliceBlue.500"
+              transition="all 0.5s"
+              transform={
+                isOpen ? "rotate(-225deg) translate(-8px, 8px)" : "none"
+              }
+              _groupHover={{
+                bg: "asparagus.500",
+              }}
+              mt="8px"
+            />
+          </Box>
+        </HStack>
+      </Box>
     </>
   );
 };

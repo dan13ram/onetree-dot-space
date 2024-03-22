@@ -18,7 +18,7 @@ export const theme = extendTheme({
     global: {
       "html, body": {
         bg: "aliceBlue.500",
-        color: "black.500",
+        color: "darkGreen.500",
       },
       body: {
         pl: { base: "0", md: "6rem" },
@@ -27,6 +27,7 @@ export const theme = extendTheme({
     },
   },
   colors: {
+    lightGreen: "rgba(24, 198, 254, 0.3)",
     darkGreen: {
       DEFAULT: "#024f47",
       100: "#00100e",

@@ -2,18 +2,24 @@
 templateKey: work-project
 title: WPOKT Bridge
 date: 2023-10-05T00:18:20.000Z
-description: Bridge your POKT to ETH Mainnet
+overview: Bridge your POKT to ETH Mainnet
 featured: true
 thumbnail: /images/work/questchains-bg.png
-image: /images/work/questchains.png
-points:
+description:
     - Developed a bridge with validators that help bridge your POKT tokens from POKT mainnet to ETH mainnet
+methodology:
+challenges:
+results:
+images:
+    - /images/work/questchains.png
 links:
     - label: live dapp
       icon: view
+      featured: true
       url: https://wpokt.network
     - label: code
       icon: github
+      featured: true
       url: https://github.com/pokt-network/wpokt-backend
 tools:
     - golang

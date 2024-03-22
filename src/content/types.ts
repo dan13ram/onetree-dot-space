@@ -2,12 +2,16 @@ export type WorkPost = {
   readonly templateKey: string;
   readonly slug: string;
   readonly title: string;
+  readonly overview: string;
   readonly description: string;
+  readonly methodology: string;
+  readonly challenges: string;
+  readonly results: string;
   readonly tags: string[];
   readonly date: string;
   readonly featured: boolean;
   readonly thumbnail: string;
-  readonly image: string;
+  readonly images: string[];
   readonly points: string[];
   readonly content: string; // markdown
   readonly links: LinkPost[];
@@ -17,6 +21,7 @@ export type WorkPost = {
 export type LinkPost = {
   readonly label: string;
   readonly url: string;
+  readonly featured: boolean;
   readonly icon: string;
 };
 
