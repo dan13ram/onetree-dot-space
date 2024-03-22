@@ -13,11 +13,12 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import { OneTreeIcon } from "./icons/OneTreeIcon";
 
 const links = [
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/contact", label: "Contact" },
   { href: "/about", label: "About" },
-  { href: "/work", label: "Work" },
-  { href: "/art", label: "Art" },
 ];
 
 const socials = [
@@ -66,8 +67,9 @@ const DesktopNavBar = () => {
           }}
           w="100%"
           textAlign="center"
+          mb="1rem"
         >
-          home
+          <OneTreeIcon w="4rem" h="4rem" />
         </Link>
         {links.map((link) => (
           <Link
@@ -155,7 +157,8 @@ const MobileNavBar = () => {
       <HStack
         w="100vw"
         h="5rem"
-        p="0 2rem"
+        pr={8}
+        pl={6}
         justify="space-between"
         position="fixed"
         bottom="0"
@@ -171,7 +174,7 @@ const MobileNavBar = () => {
             color: "asparagus.500",
           }}
         >
-          home
+          <OneTreeIcon w="3rem" h="3rem" />
         </Link>
 
         <Box
