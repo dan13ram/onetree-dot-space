@@ -10,26 +10,26 @@ methodology:
 challenges:
 results:
 images:
-    - /images/work/questchains.png
+  - /images/work/questchains.png
 links:
-    - label: live dapp
-      featured: true
-      icon: view
-      url: https://charactersheets.io
-    - label: code
-      featured: true
-      icon: github
-      url: https://github.com/raid-guild/character-sheets-frontend
+  - label: live dapp
+    featured: true
+    icon: view
+    url: https://charactersheets.io
+  - label: code
+    featured: true
+    icon: github
+    url: https://github.com/raid-guild/character-sheets-frontend
 tools:
-    - typescript
-    - nextjs
-    - solidity
-    - ethersjs
-    - graphprotocol
+  - typescript
+  - nextjs
+  - solidity
+  - ethersjs
+  - graphprotocol
 tags:
-    - ethereum
-    - solidity
-    - backend
-    - fullstack
-    - frontend
+  - ethereum
+  - solidity
+  - backend
+  - fullstack
+  - frontend
 ---

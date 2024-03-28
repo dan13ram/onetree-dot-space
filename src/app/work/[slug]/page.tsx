@@ -1,7 +1,8 @@
+import { VStack } from "@chakra-ui/react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { WorkTile } from "@/components/WorkTile";
+import { WorkDisplay } from "@/components/WorkDisplay";
 import { getWorkPostBySlug, getWorkPostSlugs } from "@/content/work";
 
 type Params = {
@@ -10,12 +11,18 @@ type Params = {
   };
 };
 
-const WorkPostPage: React.FC<React.PropsWithChildren<Params>> = ({
-  params,
-}: Params) => {
+const WorkPostPage: React.FC<Params> = ({ params }: Params) => {
   const post = getWorkPostBySlug(params.slug);
 
-  return <WorkTile key={post.slug} {...post} />;
+  if (!post) {
+    return notFound();
+  }
+
+  return (
+    <VStack w="100%" maxW="90vw">
+      <WorkDisplay {...post} />;
+    </VStack>
+  );
 };
 
 export const generateMetadata = ({ params }: Params): Metadata => {
@@ -42,7 +49,7 @@ export const generateStaticParams = async (): Promise<
   const slugs = getWorkPostSlugs();
 
   return slugs.map((slug) => ({
-    slug: slug,
+    slug,
   }));
 };
 

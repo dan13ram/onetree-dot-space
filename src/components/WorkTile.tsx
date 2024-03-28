@@ -38,6 +38,9 @@ export const WorkTile: React.FC<WorkPost> = ({
       alignItems="stretch"
       position="relative"
       color="darkGreen.500"
+      _hover={{
+        transform: "scale(1.0125)",
+      }}
     >
       <Box
         w="100%"
@@ -120,6 +123,7 @@ export const WorkTile: React.FC<WorkPost> = ({
                 <Link
                   isExternal
                   key={link.url}
+                  href={link.url}
                   _hover={{
                     transform: "scale(1.1)",
                     color: "black.500",

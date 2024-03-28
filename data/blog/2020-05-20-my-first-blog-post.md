@@ -3,13 +3,13 @@ templateKey: blog-post
 title: My First Blog Post
 date: 2020-05-20T11:37:00.000Z
 description: The first blog post must contain some data but mainly an
-    introduction to myself and a little about what the readers can expect in my
-    future posts.
+  introduction to myself and a little about what the readers can expect in my
+  future posts.
 featuredPost: true
 featuredImage: /img/charcoal/bob-dylan-smoking.jpeg
 tags:
-    - first
-    - testing
+  - first
+  - testing
 ---
 
 Hello guys, welcome to my blog!
@@ -42,9 +42,9 @@ I can add todo notes like so
 
 and that results in the following:
 
--   Make website
--   Write Intro
--   Add Content
+- Make website
+- Write Intro
+- Add Content
 
 I can also make numbered nodes like so
 

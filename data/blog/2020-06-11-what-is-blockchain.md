@@ -6,8 +6,8 @@ featuredPost: true
 featuredImage: /img/blog/blockchain.png
 description: What is Blockchain and why do we need it?
 tags:
-    - blockchain
-    - ethereum
+  - blockchain
+  - ethereum
 ---
 
 You must have come across the term Blockchain floating around the internet in the last few years. Bitcoin? Cryptocurrency?
