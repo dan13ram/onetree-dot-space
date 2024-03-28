@@ -7,16 +7,16 @@ import { ArtPost } from "./types";
 const artDirectory = join(process.cwd(), "data", "art");
 
 export function getArtPostSlugs(): string[] {
-  return fs.readdirSync(artDirectory);
+  const files = fs.readdirSync(artDirectory);
+  return files.map((file) => file.replace(/\.md$/, ""));
 }
 
 export function getArtPostBySlug(slug: string): ArtPost {
-  const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(artDirectory, `${realSlug}.md`);
+  const fullPath = join(artDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  return { ...data, slug: realSlug, content } as ArtPost;
+  return { ...data, slug, content } as ArtPost;
 }
 
 export function getAllArtPosts(): ArtPost[] {

@@ -7,16 +7,16 @@ import { WorkPost } from "./types";
 const workDirectory = join(process.cwd(), "data", "work");
 
 export function getWorkPostSlugs(): string[] {
-  return fs.readdirSync(workDirectory);
+  const files = fs.readdirSync(workDirectory);
+  return files.map((file) => file.replace(/\.md$/, ""));
 }
 
 export function getWorkPostBySlug(slug: string): WorkPost {
-  const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(workDirectory, `${realSlug}.md`);
+  const fullPath = join(workDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  return { ...data, slug: realSlug, content } as WorkPost;
+  return { ...data, slug, content } as WorkPost;
 }
 
 export function getAllWorkPosts(): WorkPost[] {

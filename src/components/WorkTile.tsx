@@ -16,6 +16,7 @@ import { ExternalLinkIcon } from "./icons/ExternalLinkIcon";
 import { GithubIcon } from "./icons/GithubIcon";
 
 export const WorkTile: React.FC<WorkPost> = ({
+  slug,
   title,
   overview,
   thumbnail,
@@ -52,47 +53,58 @@ export const WorkTile: React.FC<WorkPost> = ({
           borderRadius="1rem"
           bg="lightGreen"
         >
-          <VStack
-            align="stretch"
-            w="100%"
-            px={{ base: 4, lg: 8 }}
-            py={{ base: 4, lg: 6 }}
-            spacing={6}
-            justifyContent="space-between"
-            borderRadius="1rem"
-            transition="background-color 0.25s"
-            _hover={{
-              bg: "rgba(244, 250, 255, 0.5)",
-            }}
+          <Link
+            href={`/work/${slug}`}
+            _hover={{}}
+            display="flex"
+            alignItems="stretch"
           >
-            <VStack align="stretch" w="100%">
-              <Heading fontWeight="700" pr="3.75rem">
-                {title}
-              </Heading>
-              <SimpleGrid
-                templateColumns={{ base: "1fr", lg: "2fr 1fr", xl: "1fr 1fr" }}
-                spacing={4}
-                mt="1rem"
-              >
-                <Text fontWeight="500">{overview}</Text>
-              </SimpleGrid>
+            <VStack
+              align="stretch"
+              w="100%"
+              px={{ base: 4, lg: 8 }}
+              py={{ base: 4, lg: 6 }}
+              spacing={6}
+              justifyContent="space-between"
+              borderRadius="1rem"
+              transition="background-color 0.25s"
+              _hover={{
+                bg: "rgba(244, 250, 255, 0.5)",
+              }}
+            >
+              <VStack align="stretch" w="100%">
+                <Heading fontWeight="700" pr="3.75rem">
+                  {title}
+                </Heading>
+                <SimpleGrid
+                  templateColumns={{
+                    base: "1fr",
+                    lg: "2fr 1fr",
+                    xl: "1fr 1fr",
+                  }}
+                  spacing={4}
+                  mt="1rem"
+                >
+                  <Text fontWeight="500">{overview}</Text>
+                </SimpleGrid>
+              </VStack>
+              <VStack align="stretch" w="100%">
+                <Wrap mt="1.5rem">
+                  {tools.map((tool) => (
+                    <Tag
+                      key={tool}
+                      colorScheme="darkGreen"
+                      color="aliceBlue.500"
+                      fontFamily="mono"
+                      fontSize={{ base: "xs", lg: "sm" }}
+                    >
+                      {tool}
+                    </Tag>
+                  ))}
+                </Wrap>
+              </VStack>
             </VStack>
-            <VStack align="stretch" w="100%">
-              <Wrap mt="1.5rem">
-                {tools.map((tool) => (
-                  <Tag
-                    key={tool}
-                    colorScheme="darkGreen"
-                    color="aliceBlue.500"
-                    fontFamily="mono"
-                    fontSize={{ base: "xs", lg: "sm" }}
-                  >
-                    {tool}
-                  </Tag>
-                ))}
-              </Wrap>
-            </VStack>
-          </VStack>
+          </Link>
           <HStack
             position="absolute"
             top="0"

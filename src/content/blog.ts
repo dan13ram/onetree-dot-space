@@ -7,16 +7,16 @@ import { BlogPost } from "./types";
 const blogDirectory = join(process.cwd(), "data", "blog");
 
 export function getBlogPostSlugs(): string[] {
-  return fs.readdirSync(blogDirectory);
+  const files = fs.readdirSync(blogDirectory);
+  return files.map((file) => file.replace(/\.md$/, ""));
 }
 
 export function getBlogPostBySlug(slug: string): BlogPost {
-  const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(blogDirectory, `${realSlug}.md`);
+  const fullPath = join(blogDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  return { ...data, slug: realSlug, content } as BlogPost;
+  return { ...data, slug, content } as BlogPost;
 }
 
 export function getAllBlogPosts(): BlogPost[] {

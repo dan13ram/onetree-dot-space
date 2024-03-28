@@ -17,7 +17,7 @@ import Image from "next/image";
 import { OneTreeIcon } from "./icons/OneTreeIcon";
 
 const links = [
-  { href: "/portfolio", label: "Portfolio" },
+  { href: "/work", label: "Work" },
   { href: "/contact", label: "Contact" },
   { href: "/about", label: "About" },
 ];
