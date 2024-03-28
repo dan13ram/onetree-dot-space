@@ -1,6 +1,7 @@
+import { SimpleGrid } from "@chakra-ui/react";
+
 import { WorkTile } from "@/components/WorkTile";
 import { getAllWorkPosts } from "@/content/work";
-import { SimpleGrid } from "@chakra-ui/react";
 
 const Work: React.FC = () => {
   const workPosts = getAllWorkPosts();

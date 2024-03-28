@@ -13,6 +13,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import Image from "next/image";
+
 import { OneTreeIcon } from "./icons/OneTreeIcon";
 
 const links = [
